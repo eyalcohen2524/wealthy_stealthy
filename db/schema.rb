@@ -27,11 +27,13 @@ ActiveRecord::Schema.define(version: 2020_02_16_150844) do
   end
 
   create_table "rentals", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "package_id"
+    t.bigint "user_id"
+    t.bigint "package_id"
     t.datetime "rental_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["package_id"], name: "index_rentals_on_package_id"
+    t.index ["user_id"], name: "index_rentals_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,4 +49,6 @@ ActiveRecord::Schema.define(version: 2020_02_16_150844) do
   end
 
   add_foreign_key "packages", "users"
+  add_foreign_key "rentals", "packages"
+  add_foreign_key "rentals", "users"
 end
