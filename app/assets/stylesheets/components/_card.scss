@@ -20,6 +20,22 @@
 //   // background: linear-gradient(0, 0, 0, 0.19);
 // }
 
+.demo-card:hover{
+  .text-hover h3{
+    transition: 1s;
+    color: white;
+    text-shadow: 0 5px 15px black;
+    opacity: 1;
+  }
+}
+.package-demo-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 28px;
+  flex-grow: 1;
+  padding: 20px;
+}
+
 .demo-card {
   position: relative;
 }
@@ -42,21 +58,7 @@
   opacity: 0;
 }
 
-.demo-card:hover{
-  .text-hover h3{
-  transition: 1s;
-  color: white;
-  text-shadow: 0 5px 15px black;
-  opacity: 1;
-}
-}
-.package-demo-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 28px;
-  flex-grow: 1;
-  padding: 20px;
-}
+
 
 @media(max-width: 786px) {
   .package-demo-cards {
