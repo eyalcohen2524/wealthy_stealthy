@@ -15,7 +15,7 @@ class PackagesController < ApplicationController
   def create
     @package = Package.new(package_params)
     if @package.save
-      redirect_to packages_path
+      redirect_to package_path(@package)
     else
       render :new
     end
@@ -25,6 +25,11 @@ class PackagesController < ApplicationController
   end
 
   def update
+    if @package.save
+      redirect_to package_path(@package)
+    else
+      render :edit
+    end
   end
 
   def destroy
