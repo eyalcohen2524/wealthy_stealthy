@@ -1,5 +1,5 @@
 class PackagesController < ApplicationController
-  before_action :set_package, only: %i[show edit update]
+  before_action :set_package, only: %i[show edit update destroy]
 
   def index
     @packages = Package.all
