@@ -11,10 +11,13 @@
   border-radius: 10px;
   margin: auto;
   overflow: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('https://images.unsplash.com/photo-1568114774789-b3d4dd55ed35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
 }
 
 .demo-card:hover {
-  background: linear-gradient(0, 0, 0, 0.19);
+  transition: 1s;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1568114774789-b3d4dd55ed35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60');
+  // background: linear-gradient(0, 0, 0, 0.19);
 }
 
 
