@@ -27,6 +27,37 @@
   }
 }
 
+.demo-card:hover {
+  background: linear-gradient(0, 0, 0, 0.19);
+}
+
+
+.text-hover h3{
+  opacity: 0;
+}
+
+.demo-card:hover{
+  .text-hover h3{
+  transition: 1s;
+  color: white;
+  opacity: 1;
+}
+}
+.package-demo-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 28px;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+@media(max-width: 786px) {
+  .package-demo-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
 
 
 // .card {

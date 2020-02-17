@@ -6,13 +6,14 @@
       </a>
     </div>
     <div class="full-middle">
-  <a href="/" class="logo"></a>
+      <a href="/" class="logo"></a>
     </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  </div>
 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   </div>
+  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -20,21 +21,29 @@
       </li>
       <li class="nav-item">
         <%= link_to "Packages", packages_path, class: "nav-link" %>
-      </li>
 
-      <li class="nav-item dropdown">
-        <%= link_to me_path do %>
-          <img class="avatar" id="navbarDropdown" src="https://scontent.fhfa2-2.fna.fbcdn.net/v/t1.0-9/35026433_2057472337848500_346673924588699648_n.jpg?_nc_cat=105&_nc_ohc=ffH3mpkrSVkAX8Jd2eY&_nc_ht=scontent.fhfa2-2.fna&oh=516beaf829cc18340599b47a3c5f48eb&oe=5EFF5ED1" />
-        <% end %>
-
-
-      </li>
-
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <div class ="navbar-btns">
+          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-flat" %>
+          <%= link_to "Login", new_user_session_path, class: "btn btn-gradient" %>
         </div>
-      </li>
-    </ul>
+
+        <li class="nav-item">
+          <%= link_to "Browse", packages_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item dropdown">
+          <%= link_to me_path do %>
+            <img class="avatar" id="navbarDropdown" src="https://scontent.fhfa2-2.fna.fbcdn.net/v/t1.0-9/35026433_2057472337848500_346673924588699648_n.jpg?_nc_cat=105&_nc_ohc=ffH3mpkrSVkAX8Jd2eY&_nc_ht=scontent.fhfa2-2.fna&oh=516beaf829cc18340599b47a3c5f48eb&oe=5EFF5ED1" />
+          <% end %>
+        </li>
+
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+          </div>
+        </li>
+      </ul>
   </div>
 </div>
