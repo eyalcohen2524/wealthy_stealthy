@@ -1,7 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #000000;
-  // width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
   color: white;
   a {
     color: white;

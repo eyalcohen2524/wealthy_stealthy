@@ -6,7 +6,7 @@
   // height: 100px;
   padding: 0px 50px;
   color: white;
-  position: realtive;
+  position: relative;
   bottom: 0;
   left: 0;
   overflow: hidden;
@@ -19,13 +19,13 @@
 }
 .footer-links a {
   color: #f18805;
-  opacity: 0.15;
+  opacity: 1;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
-  opacity: 1;
+  opacity: 0.5;
 }
 .footer .fa-heart {
   color: #D23333;
