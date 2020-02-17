@@ -13,6 +13,22 @@
   overflow: hidden;
 }
 
+.demo-card:hover {
+  background: linear-gradient(0, 0, 0, 0.19);
+}
+
+
+.text-hover h3{
+  opacity: 0;
+}
+
+.demo-card:hover{
+  .text-hover h3{
+  transition: 1s;
+  color: white;
+  opacity: 1;
+}
+}
 .package-demo-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
