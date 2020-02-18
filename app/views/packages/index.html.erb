@@ -8,8 +8,8 @@
       <% @packages.each do |package| %>
         <div class="col-12 col-md-4">
           <%= link_to package_path(package) do %>
-            <div style="background-color: $mist;" class="p-3 mb-3">
-              <p><%= package.name %></p>
+            <div class="package-card">
+              <h5><%= package.name %></h5>
             </div>
           <% end %>
         </div>
