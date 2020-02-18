@@ -15,7 +15,9 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= yield %>
+    <div style="min-height: 78vh">
+      <%= yield %>
+    </div>
 
     <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
