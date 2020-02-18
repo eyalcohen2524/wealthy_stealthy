@@ -4,3 +4,17 @@
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
+
+.package-info {
+
+}
+
+.carousel-wrap {
+  display: flex;
+  justify-content: space-between;
+  // height: 200px;
+}
+
+.carousel-inner {
+  max-height: 600px;
+}
