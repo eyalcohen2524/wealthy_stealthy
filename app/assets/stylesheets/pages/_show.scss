@@ -1,8 +1,10 @@
 .dash-container {
   display: flex;
+  justify-content: space-evenly;
 }
 
 #package-creator {
+  margin-top: 10px;
   width: 50%;
   height: 100vh;
   position: sticky;

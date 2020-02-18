@@ -1,6 +1,5 @@
 <div class="dash-container">
   <div class="cards">
-    <h1> New Package </h1>
     <% @packages.each do |package| %>
     <div class="card">
       <%=  package.name%>
@@ -8,7 +7,8 @@
     <% end%>
   </div>
 
-    <div id="package-creator card">
+    <div id="package-creator">
+    <h3> New Package </h3>
     <%= simple_form_for @package,
     wrapper: :horizontal_form do |f| %>
 
