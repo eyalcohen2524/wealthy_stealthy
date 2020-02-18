@@ -8,16 +8,14 @@ class PackagesController < ApplicationController
   def show
   end
 
-  def new
-    @package = Package.new
-  end
 
   def create
     @package = Package.new(package_params)
+    @package.user = current_user
     if @package.save
       redirect_to package_path(@package)
     else
-      render :new
+      redirect_to me_path
     end
   end
 
@@ -27,6 +25,7 @@ class PackagesController < ApplicationController
   def update
     if @package.save
       redirect_to package_path(@package)
+
     else
       render :edit
     end
