@@ -1,0 +1,11 @@
+.package-card {
+  padding: 40px;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  border-radius: 2px;
+  transition: background-color 0.5s ease-out;
+  &:hover {
+    background-color: #D7D8DF;
+  }
+}
