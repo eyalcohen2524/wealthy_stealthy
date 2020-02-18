@@ -4,12 +4,14 @@
     <h1>Available Packages</h1>
     <p>Find the right wealthy package for you</p>
 
-    <ul>
+    <div class="row">
       <% @packages.each do |package| %>
-        <li>
-          <%= link_to package.name, package_path(package) %>
-        </li>
+        <div class="col-12 col-md-4">
+          <div>
+            <%= link_to package.name, package_path(package) %>
+          </div>
+        </div>
       <% end %>
-    </ul>
+    </div>
   </div>
 </div>
