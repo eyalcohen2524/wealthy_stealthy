@@ -1,11 +1,15 @@
 
-<div>
-  <h1>Available Packages</h1>
-  <p>Find the right wealth package for you</p>
+<div class="row">
+  <div class="col-8 offset-2">
+    <h1>Available Packages</h1>
+    <p>Find the right wealthy package for you</p>
 
-  <ul>
-    <% @packages.each do |package| %>
-      <li><%= package.name %></li>
-    <% end %>
-  </ul>
+    <ul>
+      <% @packages.each do |package| %>
+        <li>
+          <%= link_to package.name, package_path(package) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
