@@ -33,7 +33,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 28px;
   flex-grow: 1;
-  padding: 20px;
+  // padding: 20px;
 }
 
 .demo-card {
@@ -60,7 +60,7 @@
 
 
 
-@media(max-width: 786px) {
+@media(max-width: 950px) {
   .package-demo-cards {
     grid-template-columns: 1fr 1fr;
   }
