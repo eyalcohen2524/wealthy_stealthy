@@ -1,2 +1,11 @@
-<h1>Packages#index</h1>
-<p>Find me in app/views/packages/index.html.erb</p>
+
+<div>
+  <h1>Available Packages</h1>
+  <p>Find the right wealth package for you</p>
+
+  <ul>
+    <% @packages.each do |package| %>
+      <li><%= package.name %></li>
+    <% end %>
+  </ul>
+</div>
