@@ -6,9 +6,11 @@
       <p>Find the right wealthy package for you</p>
     </div>
 
+
     <div class="row">
       <% @packages.each do |package| %>
-        <div class="col-12 col-md-4">
+        <div class="demo-card m-2" style="height: 300px; width: 300px; background-image: url(https://images.unsplash.com/photo-1531347472897-982afb0e23a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);">
+
           <%= link_to package_path(package) do %>
             <div class="package-card">
               <h5><%= package.name %></h5>
