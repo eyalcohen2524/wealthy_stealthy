@@ -1,0 +1,13 @@
+.banner-home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), asset-url('classy_hands.jpg');
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  div {
+    text-align: center;
+    color: white;
+  }
+}
