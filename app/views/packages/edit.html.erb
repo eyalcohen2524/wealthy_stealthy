@@ -1,2 +1,5 @@
-<h1>Packages#edit</h1>
-<p>Find me in app/views/packages/edit.html.erb</p>
+<%= simple_form_for(@package) do |f| %>
+  <!-- [...] -->
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <!-- [...] -->
+<% end %>

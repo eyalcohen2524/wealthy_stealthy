@@ -3,6 +3,11 @@
     <% @packages.each do |package| %>
     <div class="card">
       <%=  package.name%>
+      <ul>
+      <%  package.photos.each do |photo| %>
+        <li>photo</li>
+      <% end%>
+      </ul>
     </div>
     <% end%>
   </div>
@@ -25,6 +30,8 @@
             <%= f.input :content, as: :text  %>
 
             <%= f.input :price, as: :float %>
+
+              <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           <div class="form-actions btn-flat text-center">
             <%= f.button :submit %>
           </div>

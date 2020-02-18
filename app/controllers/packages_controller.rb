@@ -42,6 +42,6 @@ class PackagesController < ApplicationController
   end
 
   def package_params
-    params.require(:package).permit(:price, :description, :content, :name)
+    params.require(:package).permit(:price, :description, :content, :name, photos: [])
   end
 end
