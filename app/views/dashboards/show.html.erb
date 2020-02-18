@@ -1,4 +1,4 @@
-<div class="dash-container">
+<div class="new-package-dashboard">
   <div class="cards">
     <% @packages.each do |package| %>
     <div class="card">
@@ -7,24 +7,38 @@
     <% end%>
   </div>
 
-    <div id="package-creator">
-    <h3> New Package </h3>
-    <%= simple_form_for @package,
-    wrapper: :horizontal_form do |f| %>
+  <div class="devise-input">
+    <div class="row justify-content-center">
+      <div class="form-group col-12-offset-1 col-lg-4 m-3">
+        <!-- <div id="package-creator"> -->
+          <h3> New Package </h3>
 
-    <%= f.error_notification %>
+          <%= simple_form_for @package,
+          wrapper: :horizontal_form do |f| %>
 
-    <%= f.input :name, as: :string %>
+            <%= f.error_notification %>
 
-    <%= f.input :description, as: :text %>
+            <%= f.input :name, as: :string %>
 
-    <%= f.input :content, as: :text  %>
+            <%= f.input :description, as: :text %>
 
-    <%= f.input :price, as: :float %>
+            <%= f.input :content, as: :text  %>
 
-    <%= f.button :submit,  class: "btn-primary" %>
-    <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
-    <% end %>
+            <%= f.input :price, as: :float %>
+          <div class="form-actions btn-flat text-center">
+            <%= f.button :submit %>
+          </div>
+          <div class="btn btn-block btn-outline-secondary text-center my-3" >
+            <%= f.button :button, "Cancel", type: "reset" %>
+          </div>
+          <% end %>
+        <!-- </div> -->
+      </div>
     </div>
+  </div>
 </div>
+
+
+
+
 
