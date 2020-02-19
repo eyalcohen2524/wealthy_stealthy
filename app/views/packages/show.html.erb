@@ -36,9 +36,15 @@
           <br>
           <h2>€<%= @package.price %></h2>
           <br>
+          <% if policy(@package).edit? %>
+          <div class="btn btn-flat px-3">
+            <h3>Edit Package</h3>
+          </div>
+          <% else %>
           <div class="btn btn-flat px-3">
             <h3>Purchase Package</h3>
           </div>
+          <% end %>
         <!-- </ul> -->
     </div>
   </div>
