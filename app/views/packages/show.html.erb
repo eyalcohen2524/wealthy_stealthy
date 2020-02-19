@@ -11,7 +11,7 @@ https://res.cloudinary.com/milesbader/image/upload/v1582110378/zkfczsz3ujp0rfrtw
   <div class="carousel-wrap">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
-        <% @package.photo.each_with_index do |photo, index| %>
+        <% @package.photos.each_with_index do |photo, index| %>
           <% if index ==  0 %>
             <div class="carousel-item active">
               <img class="d-block w-100" src="https://res.cloudinary.com/dky7toaov/image/upload/v1582110378/<%= photo.key %>" alt="First slide">
