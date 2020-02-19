@@ -30,12 +30,20 @@ eyal = User.new(
   password: '123456789',
   username: 'eyalcohen2524'
 )
-
 image1 = open("https://res.cloudinary.com/milesbader/image/upload/v1582110378/zkfczsz3ujp0rfrtwxvp.jpg")
 eyal.photo.attach(io: image1, filename: 'seed')
 
+tamara = User.new(
+  email: 'tara_art@live.com',
+  password: '123456789',
+  username: 'tara_art'
+)
+image2 = open("https://res.cloudinary.com/milesbader/image/upload/v1582121651/obcdiacrgszogefgfq3l.jpg")
+tamara.photo.attach(io: image2, filename: 'seed')
+
 miles.save!
 eyal.save!
+tamara.save!
 
 puts 'Two users generated'
 puts "You now have #{User.count} users"
