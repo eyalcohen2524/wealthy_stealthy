@@ -11,6 +11,7 @@ class PackagesController < ApplicationController
 
 
   def create
+    byebug
     @package = Package.new(package_params)
     @package.user = current_user
     if @package.save
@@ -42,6 +43,6 @@ class PackagesController < ApplicationController
   end
 
   def package_params
-    params.require(:package).permit(:price, :description, :content, :name)
+    params.require(:package).permit(:price, :description, :content, :name, photos: [])
   end
 end
