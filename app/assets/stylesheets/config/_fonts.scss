@@ -13,3 +13,19 @@ $headers-font: "Raleway", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+@font-face {
+  font-family: "BIG JOHN";
+  src: font-url('big_john_slim_joe/BIG-JOHN.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+$big-john: "BIG JOHN";
+
+@font-face {
+  font-family: "Slim Joe";
+  src: font-url('big_john_slim_joe/Slim-Joe.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+$slim-joe: "Slim Joe";
