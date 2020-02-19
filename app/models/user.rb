@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # validates :username, presence: true
   has_many :rentals
+  has_many :user
   validates :username, presence: true, uniqueness: true
 end

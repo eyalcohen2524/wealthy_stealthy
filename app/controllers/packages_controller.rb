@@ -6,13 +6,13 @@ class PackagesController < ApplicationController
   end
 
   def show
-    # raise
   end
 
 
   def create
     @package = Package.new(package_params)
     @package.user = current_user
+    authorize @restaurant
     if @package.save
       redirect_to package_path(@package)
     else
