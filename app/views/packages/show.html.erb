@@ -16,7 +16,16 @@
               <!-- <img class="d-block w-100"  alt="Second slide"> -->
             </div>
           <% end  %>
-        <% end %>
+          <% end %>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -45,13 +54,14 @@
             <h3>Edit Package</h3>
           </div>
           <% else %>
-          <div class="btn btn-flat px-3">
-            <h3>Purchase Package</h3>
-          </div>
+          <%= simple_form_for([ @package, @rental ]) do |form| %>
+          <%= form.input :rental_date, as: :date %>
+          <%= form.button :submit, "Purchase Package", class: "btn btn-flat p-3 btn-purchase" %>
           <% end %>
-        <!-- </ul> -->
+          <% end %>
+          <!-- </ul> -->
+        </div>
+      </div>
+      <!-- </div> -->
     </div>
-  </div>
-    <!-- </div> -->
-</div>
 
