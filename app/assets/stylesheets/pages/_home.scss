@@ -1,4 +1,83 @@
 // Specific CSS for your home-page
-.home-content {
-  background-color: green;
+.dash-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#package-creator {
+  margin-top: 10px;
+  width: 50%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  margin-left: 20px;
+}
+
+.cards {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+  max-width: 70%;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 800px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 22px;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.card-product {
+  overflow: hidden;
+  height: 200px;
+  width: 120%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  border-radius: 8px;
+  // margin-left: 20px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 320px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  text-align: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 18px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.card-product .card-product-infos {
+  padding: 24px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
