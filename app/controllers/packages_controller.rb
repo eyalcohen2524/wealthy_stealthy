@@ -8,6 +8,7 @@ class PackagesController < ApplicationController
   def show
     # @package = Package.find_by(params[:id])
     authorize @package
+    @rental = Rental.new
   end
 
 
