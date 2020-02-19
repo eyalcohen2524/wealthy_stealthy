@@ -15,7 +15,7 @@
           <div class="col-12 col-md-4">
             <%= link_to package_path(package) do %>
             <!-- coming in as nil now. need to improve to show image -->
-              <div class="demo-card" style="background-image: url('<% cl_image_path package.photos.first.key, height: 300, width: 400, crop: :fill %>');">
+              <div class="demo-card">
                 <h5><%= package.name %></h5>
               </div>
             <% end %>
