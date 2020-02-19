@@ -1,10 +1,3 @@
-<!-- <h1>Packages#show</h1>
-<p>Find me in app/views/packages/show.html.erb</p>
-https://res.cloudinary.com/milesbader/image/upload/v1582110378/zkfczsz3ujp0rfrtwxvp.jpg
-          miles' key:  https://res.cloudinary.com/milesbader/image/upload/v1582109148/<%#= @package.photo.key %>
- -->
-
-
 <div class="container">
   <!-- <img src="https://images.unsplash.com/photo-1472417583565-62e7bdeda490?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt=""> -->
   <!-- <div class="row"> -->
@@ -47,9 +40,15 @@ https://res.cloudinary.com/milesbader/image/upload/v1582110378/zkfczsz3ujp0rfrtw
           <br>
           <h2>€<%= @package.price %></h2>
           <br>
+          <% if policy(@package).edit? %>
+          <div class="btn btn-flat px-3">
+            <h3>Edit Package</h3>
+          </div>
+          <% else %>
           <div class="btn btn-flat px-3">
             <h3>Purchase Package</h3>
           </div>
+          <% end %>
         <!-- </ul> -->
     </div>
   </div>
