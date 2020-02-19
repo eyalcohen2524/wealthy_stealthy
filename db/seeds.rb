@@ -1,3 +1,4 @@
+require 'open-uri'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -16,17 +17,33 @@ puts 'database empty'
 
 puts 'Generating 2 users'
 
-miles = User.create!(
+miles = User.new(
   email: 'milesdbader@gmail.com',
   password: '123456789',
   username: 'milesdbader'
 )
+image = open('https://res.cloudinary.com/milesbader/image/upload/v1582110352/jajkc0qhfizmqiv2iw08.png')
+miles.photo.attach(io: image, filename: 'seed')
 
-eyal = User.create!(
+eyal = User.new(
   email: 'eyalcohen2524@gmail.com',
   password: '123456789',
   username: 'eyalcohen2524'
 )
+image1 = open("https://res.cloudinary.com/milesbader/image/upload/v1582110378/zkfczsz3ujp0rfrtwxvp.jpg")
+eyal.photo.attach(io: image1, filename: 'seed')
+
+tamara = User.new(
+  email: 'tara_art@live.com',
+  password: '123456789',
+  username: 'tara_art'
+)
+image2 = open("https://res.cloudinary.com/milesbader/image/upload/v1582121651/obcdiacrgszogefgfq3l.jpg")
+tamara.photo.attach(io: image2, filename: 'seed')
+
+miles.save!
+eyal.save!
+tamara.save!
 
 puts 'Two users generated'
 puts "You now have #{User.count} users"
@@ -34,7 +51,7 @@ puts "You now have #{User.count} users"
 
 puts 'generating 3 packages'
 
-pack1 = Package.create(
+pack1 = Package.new(
   price: 200,
   description: 'Look stylish in an instant',
   content: 'Fancy suit; rolex watch; sleek, modern glasses;',
@@ -43,7 +60,7 @@ pack1 = Package.create(
 pack1.user = miles
 pack1.save!
 
-pack2 = Package.create(
+pack2 = Package.new(
   price: 500,
   description: 'Make your house look classy before your guests arrive',
   content: 'Tableware set (China) and Silver; 2 paintings; 1 Chandelier;',
@@ -52,7 +69,7 @@ pack2 = Package.create(
 pack2.user = eyal
 pack2.save!
 
-pack3 = Package.create(
+pack3 = Package.new(
   price: 1500,
   description: 'Show your date that you\'re cooler than James Bond, but only for the night',
   content: 'Bond-style suit; Fingerprinted hand gun; Aston Martin (display only, no keys); Cocktail - shaken, not stirred;',

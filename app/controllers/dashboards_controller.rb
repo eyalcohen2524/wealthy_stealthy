@@ -1,6 +1,10 @@
 class DashboardsController < ApplicationController
+
   def show
-    @packages = Package.all
+    @packages = policy_scope(Package)
     @package = Package.new
+    authorize @package, policy_class: PackagePolicy
   end
+
+
 end
