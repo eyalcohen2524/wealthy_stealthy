@@ -7,11 +7,11 @@ class ApplicationPolicy
   end
 
   def index?
-    false
+    true
   end
 
   def show?
-    false
+    show.where(:id => record.id).exists?
   end
 
   def create?
