@@ -1,18 +1,22 @@
-<div class="row">
-  <div class="col-lg-6 offset-1">
-    <div class="cards">
-      <% @packages.each do |package| %>
-      <div class="card">
-        <%=  package.name %>
-        <%# package.photos.first %>
+<div class="real-container">
+  <h1>Welcome back, user!</h1>
+</div>
+<div class="real-container">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <div class="real-container">
+        <% @packages.each do |package| %>
+        <div class="card">
+          <%=  package.name %>
+        </div>
+        <% end%>
       </div>
-      <% end%>
     </div>
-  </div>
 
-  <div class="devise-input">
-      <div class="form-group col-12" id="new-package-form">
-        <!-- <div id="package-creator"> -->
+    <div class="col-12 col-md-4">
+      <div class="devise-input">
+        <div class="form-group col-12" id="new-package-form">
+          <!-- <div id="package-creator"> -->
           <h3> New Package </h3>
 
           <%= simple_form_for @package,
@@ -31,11 +35,12 @@
               <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           <%= f.button :submit, class: "form-actions btn-flat text-center w-100 py-2" %>
           <% end %>
-        <!-- </div> -->
+          <!-- </div> -->
+        </div>
       </div>
+    </div>
   </div>
 </div>
-
 
 
 
