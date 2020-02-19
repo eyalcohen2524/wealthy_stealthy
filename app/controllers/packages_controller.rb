@@ -11,6 +11,7 @@ class PackagesController < ApplicationController
 
 
   def create
+    byebug
     @package = Package.new(package_params)
     @package.user = current_user
     if @package.save
