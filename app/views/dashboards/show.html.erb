@@ -1,2 +1,30 @@
-<h1>Dashboards#show</h1>
-<p>Find me in app/views/dashboards/show.html.erb</p>
+<div class="dash-container">
+  <div class="cards">
+    <% @packages.each do |package| %>
+    <div class="card">
+      <%=  package.name%>
+    </div>
+    <% end%>
+  </div>
+
+    <div id="package-creator">
+    <h3> New Package </h3>
+    <%= simple_form_for @package,
+    wrapper: :horizontal_form do |f| %>
+
+    <%= f.error_notification %>
+
+    <%= f.input :name, as: :string %>
+
+    <%= f.input :description, as: :text %>
+
+    <%= f.input :content, as: :text  %>
+
+    <%= f.input :price, as: :float %>
+
+    <%= f.button :submit,  class: "btn-primary" %>
+    <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+    <% end %>
+    </div>
+</div>
+

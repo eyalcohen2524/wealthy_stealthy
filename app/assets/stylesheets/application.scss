@@ -11,7 +11,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/show";
 
+
+h5 {
+  color: black;
+  font-weight: bolder;
+}
 // body {
 //   background-color: #1b1c21;
 // }
