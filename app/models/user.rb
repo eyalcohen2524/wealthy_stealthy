@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :rentals
   has_many :user
   validates :username, presence: true, uniqueness: true
+
+  has_one_attached :photo
+  validates :photo, presence: true
 end
