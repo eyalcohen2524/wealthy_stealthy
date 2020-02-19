@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-8 offset-2">
+    <div class="col-10 offset-1">
       <div class="text-center">
         <h1>Available Packages</h1>
         <p style="font-family: 'slim joe'">Find the right wealthy package for you</p>
@@ -12,12 +12,16 @@
 
       <div class="row">
         <% @packages.each do |package| %>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 col-lg-3 my-3">
             <%= link_to package_path(package) do %>
             <!-- coming in as nil now. need to improve to show image -->
               <div class="demo-card">
-                <h5><%= package.name %></h5>
+                <!-- <h5><%#= package.name %></h5> -->
+                <%= cl_image_tag package.photos.first.key, crop: :fill %>
               </div>
+                <!-- <div class="text-hover">
+                  <h3 style="font-family: 'BIG JOHN">Classy spaces</h3>
+                </div> -->
             <% end %>
           </div>
         <% end %>
