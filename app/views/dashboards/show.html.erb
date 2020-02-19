@@ -1,49 +1,67 @@
-<div class="row">
-  <div class="col-lg-6 offset-1">
-    <div class="cards">
-      <% @packages.each do |package| %>
-      <div class="card">
-        <%=  package.name %>
-        <%# package.photos.first %>
+<div class="real-container">
+
+  <div class="real-container dash-banner d-flex align-items-center">
+    <%= cl_image_tag @user.photo.key,
+        width: 150,
+        height: 150,
+        gravity: "face",
+        radius: "max",
+        crop: "thumb",
+        class: "m-3"
+    %>
+    <div class="flex-grow-1">
+      <h1>Welcome back, <%= @user.username %>!</h1>
+      <div class="d-flex">
+        <div class="text-center mr-4">
+          <h1><%= @user.rentals.count %></h1>
+          <h4>rentals</h4>
+        </div>
+        <div class="text-center">
+          <h1><%= @user.packages.count %></h1>
+          <h4>packages</h4>
+        </div>
       </div>
-      <% end%>
     </div>
   </div>
 
-  <div class="devise-input">
-    <div class="justify-content-center">
-      <div class="form-group col-12 m-3">
-        <!-- <div id="package-creator"> -->
-          <h3> New Package </h3>
-
-          <%= simple_form_for @package,
-          wrapper: :horizontal_form do |f| %>
-
-            <%= f.error_notification %>
-
-            <%= f.input :name, as: :string %>
-
-            <%= f.input :description, as: :text %>
-
-            <%= f.input :content, as: :text  %>
-
-            <%= f.input :price, as: :float %>
-
-              <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-          <div class="form-actions btn-flat text-center">
-            <%= f.button :submit %>
+  <div class="real-container">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <div class="real-container">
+          <% @packages.each do |package| %>
+          <div class="card">
+            <%=  package.name %>
           </div>
-          <div class="btn btn-block btn-outline-secondary text-center my-3" >
-            <%= f.button :button, "Cancel", type: "reset" %>
+          <% end%>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="devise-input">
+          <div class="form-group col-12" id="new-package-form">
+            <!-- <div id="package-creator"> -->
+            <h3> New Package </h3>
+
+            <%= simple_form_for @package,
+            wrapper: :horizontal_form do |f| %>
+
+              <%= f.error_notification %>
+
+              <%= f.input :name, as: :string %>
+
+              <%= f.input :description, as: :text %>
+
+              <%= f.input :content, as: :text  %>
+
+              <%= f.input :price, as: :float %>
+
+                <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+            <%= f.button :submit, class: "form-actions btn-flat text-center w-100 py-2" %>
+            <% end %>
+            <!-- </div> -->
           </div>
-          <% end %>
-        <!-- </div> -->
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
