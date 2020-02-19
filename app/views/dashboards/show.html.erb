@@ -1,20 +1,18 @@
-<div class="new-package-dashboard">
-  <div class="cards">
-    <% @packages.each do |package| %>
-    <div class="card">
-      <%=  package.name%>
-      <ul>
-      <%  package.photos.each do |photo| %>
-        <li>photo</li>
+<div class="row">
+  <div class="col-lg-6 offset-1">
+    <div class="cards">
+      <% @packages.each do |package| %>
+      <div class="card">
+        <%=  package.name %>
+        <%=  package.photos.first %>
+      </div>
       <% end%>
-      </ul>
     </div>
-    <% end%>
   </div>
 
   <div class="devise-input">
-    <div class="row justify-content-center">
-      <div class="form-group col-12-offset-1 col-lg-4 m-3">
+    <div class="justify-content-center">
+      <div class="form-group col-12 m-3">
         <!-- <div id="package-creator"> -->
           <h3> New Package </h3>
 
