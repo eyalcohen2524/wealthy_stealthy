@@ -8,4 +8,5 @@ class RentalPolicy < ApplicationPolicy
   def create?
     true
   end
+  #
 end
