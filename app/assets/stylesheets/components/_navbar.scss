@@ -6,7 +6,6 @@
   top: 0;
   left: 0;
   right: 0;
-  overflow: hidden;
   width: 100%;
   color: white;
   height: 125px;
@@ -33,4 +32,9 @@
   p {
     margin: 0;
   }
+}
+
+.dropdown-menu {
+  background: black;
+  opacity: 0.9;
 }
