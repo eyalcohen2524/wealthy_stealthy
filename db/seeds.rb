@@ -8,9 +8,9 @@ require 'open-uri'
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning the database'
 
-Rental.destroy_all if Rails.env.development?
-Package.destroy_all if Rails.env.development?
-User.destroy_all if Rails.env.development?
+Rental.destroy_all
+Package.destroy_all
+User.destroy_all
 
 puts 'database empty'
 
