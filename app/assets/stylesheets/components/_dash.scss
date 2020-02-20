@@ -4,17 +4,19 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   margin: 0 16px 16px 16px;
   min-height: 509px;
+  border-radius: 10px;
 }
 
 .dash-banner {
   background-color: white;
   margin: 16px auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 .card-list {
   overflow-x: scroll;
-  width: 65vw;
+  width: 63vw;
   height: 200px;
   // display: -webkit-inline-box;
   display: flex;
