@@ -1,32 +1,35 @@
-<div class="container">
-  <div class="row">
-    <div class="col-10 offset-1">
-      <div class="text-center">
-        <h1>Available Packages</h1>
-        <p style="font-family: 'slim joe'">Find the right wealthy package for you</p>
-      </div>
+<div class="real-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-10 offset-1">
+        <div class="text-center">
+          <h1>Available Packages</h1>
+          <p style="font-family: 'slim joe'">Find the right wealthy package for you</p>
+        </div>
 
-      <br>
-      <br>
+        <br>
+        <br>
 
-
-      <div class="row">
-        <% @packages.each do |package| %>
-          <div class="col-12 col-md-4 col-lg-3 m-3">
-            <%= link_to package_path(package) do %>
-            <!-- coming in as nil now. need to improve to show image -->
-              <div class="index-demo-card" style="background-image: linear-gradient(rgba(0,0,0,0.17),rgba(0,0,0,0.17)), url(https://res.cloudinary.com/milesbader/image/upload/v1582110378/<%= package.photos.first.key %>);">
-                <h5 class="card-overlay-text"><%= package.name %></h5>
-                <%#= cl_image_tag package.photos.first.key, crop: :fill %>
+        <div class="real-container">
+          <div class="row">
+            <% @packages.each do |package| %>
+              <div class="col-12 col-md-4 col-lg-3 m-3">
+                <%= link_to package_path(package) do %>
+                <!-- coming in as nil now. need to improve to show image -->
+                  <div class="index-demo-card" style="background-image: linear-gradient(rgba(0,0,0,0.17),rgba(0,0,0,0.17)), url(https://res.cloudinary.com/milesbader/image/upload/v1582110378/<%= package.photos.first.key %>);">
+                    <h5 class="card-overlay-text"><%= package.name %></h5>
+                    <%#= cl_image_tag package.photos.first.key, crop: :fill %>
+                  </div>
+                    <!-- <div class="text-hover">
+                      <h3 style="font-family: 'BIG JOHN">Classy spaces</h3>
+                    </div> -->
+                <% end %>
               </div>
-                <!-- <div class="text-hover">
-                  <h3 style="font-family: 'BIG JOHN">Classy spaces</h3>
-                </div> -->
             <% end %>
           </div>
-        <% end %>
+        </div>
+
       </div>
     </div>
   </div>
 </div>
-
