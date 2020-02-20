@@ -26,13 +26,32 @@
 
   <div class="real-container">
     <div class="row">
+
       <div class="col-12 col-md-8">
         <div class="real-container">
-          <% @packages.each do |package| %>
-          <div class="card">
-            <%=  package.name %>
+          <h2 style="margin-top: 8px;">My packages</h2>
+          <div class="card-list">
+            <% @user.packages.each do |package| %>
+              <div class="index-demo-card my-package-card" style="background-image: linear-gradient(rgba(0,0,0,0.17),rgba(0,0,0,0.17)), url(https://res.cloudinary.com/milesbader/image/upload/v1582110378/<%= package.photos.first.key %>);">
+                <h5 class="card-overlay-text"><%= package.name %></h5>
+              </div>
+            <% end%>
+
           </div>
-          <% end%>
+
+        </div>
+
+        <div class="real-container">
+          <h2 style="margin-top: 8px;">My rentals</h2>
+          <div class="card-list">
+            <% @user.packages.each do |package| %>
+              <div class="index-demo-card my-package-card" style="background-image: linear-gradient(rgba(0,0,0,0.17),rgba(0,0,0,0.17)), url(https://res.cloudinary.com/milesbader/image/upload/v1582110378/<%= package.photos.first.key %>);">
+                <h5 class="card-overlay-text"><%= package.name %></h5>
+              </div>
+            <% end%>
+
+          </div>
+
         </div>
       </div>
 
