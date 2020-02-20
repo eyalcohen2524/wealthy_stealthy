@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if request.fullpath == "/" && user_signed_in? == false %>
-      <div class ="navbar-btns">
+      <div class style="font-family: 'SLIM JOE'">
         <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-flat" %>
         <%= link_to "Login", new_user_session_path, class: "btn btn-gradient" %>
       </div>
