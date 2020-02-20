@@ -34,9 +34,11 @@
           <h2 style="margin-top: 8px;">My packages</h2>
           <div class="card-list">
             <% @user.packages.each do |package| %>
-              <div class="index-demo-card my-package-card" style="background-image: linear-gradient(rgba(0,0,0,0.17),rgba(0,0,0,0.17)), url(https://res.cloudinary.com/milesbader/image/upload/v1582110378/<%= package.photos.first.key %>);">
-                <h5 class="card-overlay-text"><%= package.name %></h5>
-              </div>
+              <%= link_to package_path(package) do %>
+                <div class="index-demo-card my-package-card" style="background-image: linear-gradient(rgba(0,0,0,0.17),rgba(0,0,0,0.17)), url(https://res.cloudinary.com/milesbader/image/upload/v1582110378/<%= package.photos.first.key %>);">
+                  <h5 class="card-overlay-text"><%= package.name %></h5>
+                </div>
+              <% end %>
             <% end%>
 
           </div>
@@ -46,14 +48,17 @@
         <div class="real-container">
           <h2 style="margin-top: 8px;">My rentals</h2>
           <div class="card-list">
-            <% @user.rentals.each do |rental| %>
-              <div class="index-demo-card my-rental-card" style="background-image: linear-gradient(rgba(0,0,0,0.17),rgba(0,0,0,0.17)), url(https://res.cloudinary.com/milesbader/image/upload/v1582110378/<%= rental.package.photos.first.key %>);">
-                <div>
-                  <h5 class="card-overlay-text"><%= rental.package.name %></h5>
-                  <p style="font-family: $slim-joe; color: white;"><%= rental.rental_date.to_formatted_s(:short) %></p>
-                  <p style="font-family: $slim-joe; color: white;">From <strong><%= rental.package.user.username %></strong></p>
+            <% @user.rentals.sort_by { |r| r.rental_date }.each do |rental| %>
+              <% next if rental.rental_date < Date.today %>
+              <%= link_to package_path(rental.package) do %>
+                <div class="index-demo-card my-rental-card" style="background-image: linear-gradient(rgba(0,0,0,0.17),rgba(0,0,0,0.17)), url(https://res.cloudinary.com/milesbader/image/upload/v1582110378/<%= rental.package.photos.first.key %>);">
+                  <div>
+                    <h5 class="card-overlay-text"><%= rental.package.name %></h5>
+                    <p style="font-family: $slim-joe; color: white;"><%= rental.rental_date.to_formatted_s(:short) %></p>
+                    <p style="font-family: $slim-joe; color: white;">From <strong><%= rental.package.user.username %></strong></p>
+                  </div>
                 </div>
-              </div>
+              <% end %>
             <% end%>
 
           </div>
